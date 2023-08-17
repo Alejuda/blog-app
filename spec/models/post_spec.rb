@@ -9,36 +9,36 @@ RSpec.describe Post, type: :model do
     Post.create(author: user, title: 'Hello', text: 'This is my first post')
   end
 
-  it 'is valid with valid attributes' do
+  it 'should be valid' do
     expect(post).to be_valid
   end
 
-  it 'title should be present' do
+  it 'Title must not be blank' do
     post.title = nil
     expect(subject).to_not be_valid
   end
 
-  it 'title should be less than or equal to 250 characters' do
+  it 'Title must not exceed 250 characters' do
     subject.title = 'A' * 300
     expect(subject).to_not be_valid
   end
 
-  it 'comments counter should be an integer' do
+  it 'CommentsCounter must be an integer' do
     post.comments_counter = 'something'
     expect(post).to_not be_valid
   end
 
-  it 'likes counter should be an integer' do
+  it 'LikesCounter must be an integer' do
     post.likes_counter = 'other thing'
     expect(post).to_not be_valid
   end
 
-  it 'comments should be greater than or equal to 0' do
+  it 'CommentsCounter should be greater than or equal to zero' do
     post.comments_counter = -1
     expect(post).to_not be_valid
   end
 
-  it 'likes should be greater than or equal to 0' do
+  it 'LikesCounter should be greater than or equal to zero' do
     post.likes_counter = -1
     expect(post).to_not be_valid
   end
