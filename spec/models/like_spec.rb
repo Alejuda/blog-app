@@ -10,7 +10,7 @@ RSpec.describe Like, type: :model do
   end
 
   let(:like) do
-    Like.new(user: user, post: post)
+    Like.new(user:, post:)
   end
 
   it 'should be valid with valid attributes' do

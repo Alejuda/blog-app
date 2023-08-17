@@ -10,7 +10,7 @@ RSpec.describe Comment, type: :model do
   end
 
   let(:comment) do
-    Comment.new(author: user, post: post, text: 'Awesome!')
+    Comment.new(author: user, post:, text: 'Awesome!')
   end
 
   it 'should be valid with valid attributes' do
