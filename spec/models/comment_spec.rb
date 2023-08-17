@@ -13,7 +13,7 @@ RSpec.describe Comment, type: :model do
     Comment.new(author: user, post: post, text: 'Awesome!')
   end
 
-  it 'is valid with valid attributes' do
+  it 'should be valid with valid attributes' do
     expect(comment).to be_valid
   end
 
@@ -25,7 +25,7 @@ RSpec.describe Comment, type: :model do
     expect(comment.post).to eq(post)
   end
 
-  it 'updates comments counter on post after save' do
+  it 'updates post comments counter after save' do
     expect { comment.save }.to change { post.reload.comments_counter }.by(1)
   end
 end
