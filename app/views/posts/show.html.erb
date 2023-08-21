@@ -1,0 +1,6 @@
+<h1>Single Post Page</h1>
+<p><strong>Title:</strong> <%= @post.title %></p>
+<p><strong>Text:</strong> <%= @post.text %></p>
+<p><strong>Comments Counter:</strong> <%= @post.comments_counter %></p>
+<p><strong>Likes Counter:</strong> <%= @post.likes_counter %></p>
+<%= link_to 'Back to All Posts', user_posts_path(@user) %>
