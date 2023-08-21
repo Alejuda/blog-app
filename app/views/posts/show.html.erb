@@ -1,6 +1,27 @@
-<h1>Single Post Page</h1>
-<p><strong>Title:</strong> <%= @post.title %></p>
-<p><strong>Text:</strong> <%= @post.text %></p>
-<p><strong>Comments Counter:</strong> <%= @post.comments_counter %></p>
-<p><strong>Likes Counter:</strong> <%= @post.likes_counter %></p>
-<%= link_to 'Back to All Posts', user_posts_path(@user) %>
+<article>
+  <div class="post-headder">
+    <h3>Post #1 by username</h3>
+    <p class="comment-like">Comments: X, Likes: Y</p>
+  </div>
+
+  <p class="post-text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam
+    nostrum quibusdam ducimus animi ipsa iste officia earum error quo! Voluptas
+    ut ipsam eligendi quam exercitationem dolores fugit, impedit omnis vitae
+    mollitia, adipisci suscipit dolore nam. Debitis eaque totam excepturi est
+    pariatur sequi recusandae, non at nesciunt. Reprehenderit dolor id fuga
+    itaque animi incidunt atque harum, temporibus exercitationem error vero sunt
+    iure aut veniam voluptate architecto ab nisi natus. Debitis, consequuntur
+    totam cupiditate culpa eius odit molestiae? Aperiam voluptatem architecto
+    necessitatibus iure debitis doloribus quidem perspiciatis rerum minus
+    placeat sapiente deleniti quisquam et, excepturi vero quas iusto obcaecati
+    qui ducimus!
+  </p>
+</article>
+<div>
+  <h3>Username: Comment #1</h3>
+  <h3>Username: Comment #2</h3>
+  <h3>Username: Comment #3</h3>
+  <h3>Username: Comment #4</h3>
+  <h3>Username: Comment #5</h3>
+</div>
