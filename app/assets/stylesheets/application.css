@@ -13,3 +13,135 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+}
+
+.user-container {
+  margin: 40px 100px;
+  display: flex;
+  gap: 20px;
+  height: 250px;
+}
+
+.user-info {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.user-name {
+  font-size: 50px;
+  align-self: center;
+}
+
+.user-photo {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-count {
+  align-self: end;
+  justify-self: end;
+}
+
+.bio-container {
+  margin: 40px 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.posts-container {
+  margin: 40px 100px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.post {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  margin-bottom: 10px;
+}
+
+.post-interactions {
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 7px 20px;
+  font-size: 15px;
+  border-radius: 3px;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-radius: 3px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.post-article {
+  margin: 40px 100px 10px 100px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.margin-sides {
+  margin: 0 100px 40px 100px;
+}
+
+.comment-like {
+  align-self: end;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
