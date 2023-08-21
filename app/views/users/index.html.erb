@@ -1,0 +1,9 @@
+<h1>All Users Page</h1>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <strong><%= user.name %></strong> - <%= user.bio %>
+      <%= link_to 'View Details', user_path(user) %>
+    </li>
+  <% end %>
+</ul>
