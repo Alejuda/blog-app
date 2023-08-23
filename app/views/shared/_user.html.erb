@@ -3,8 +3,8 @@
     <div class="user-info">
       <h2 class="user-name"><%= user.name %></h2>
       <div class="posts-counter">
-        <%= link_to "See profile", user_path(user.id), class: "see-profile" %>
-        <h4 class="user-count">Number of posts: <%= user.posts_counter %></h4>
+        <%= link_to "See profile", user_path(user.id), class: "button" %>
+        <h4 class="user-count">Number of posts: <%= user.posts_counter || 0 %></h4>
       </div>
     </div>
   </li>

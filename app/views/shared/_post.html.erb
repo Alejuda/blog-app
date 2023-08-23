@@ -1,0 +1,8 @@
+<li class="post">
+    <h3 class="post-title">Post: <%= post.title %></h3>
+    <p class="post-text">
+      <%= post.text %>
+    </p>
+    <p class="post-interactions">Comments: <%= post.comments_counter || 0 %>,
+     Likes: <%= post.likes_counter || 0 %></p>
+  </li>

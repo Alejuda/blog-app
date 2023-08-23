@@ -113,6 +113,8 @@
   border-radius: 3px;
   font-weight: 700;
   margin: 10px auto;
+  text-decoration: none;
+  color: black;
 }
 
 .post-header {
@@ -146,13 +148,9 @@
   margin-bottom: 10px;
 }
 
-.see-profile {
-  padding: 4px 10px;
-  background-color: transparent;
-  border: 2px solid black;
-  text-decoration: none;
-  color: black;
-  display: block;
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .posts-counter {
