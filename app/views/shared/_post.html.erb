@@ -1,8 +1,13 @@
 <li class="post">
+  <div class="flex-column">
     <h3 class="post-title">Post: <%= post.title %></h3>
     <p class="post-text">
       <%= post.text %>
     </p>
+  </div>
+  <div class="flex-column">
+    <%= link_to "See post >", user_post_path(@user, post.id), class: "see-post" %>
     <p class="post-interactions">Comments: <%= post.comments_counter || 0 %>,
      Likes: <%= post.likes_counter || 0 %></p>
-  </li>
+  </div>
+</li>

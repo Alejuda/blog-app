@@ -3,8 +3,8 @@
   <% @posts.each do |post| %>
     <%= render "shared/post", post: post %>
     <% unless post.comments.empty? %>
-      <%= render "shared/comments", comments: post.comments %>
+      <%= render "shared/comments", comments: post.recent_comments %>
     <% end %>
   <% end %>
-  <button class="button"> Pagination </button>
+  <%= link_to "Pagination", user_path(@user), class: "button" %>
 </ul>
