@@ -184,3 +184,14 @@
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
+.full-post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flex-start {
+  align-self: flex-start;
+  margin: 0;
+}
