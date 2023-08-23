@@ -1,32 +1,18 @@
 <article class="post-article">
   <div class="post-header">
-    <h3>Post #1 by username</h3>
-    <p class="comment-like">Comments: X, Likes: Y</p>
+    <h3>Post <%= @post.title %> by <%= @post.author.name %></h3>
+    <p class="comment-like">Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
   </div>
 
   <p class="post-text">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, laboriosam
-    nostrum quibusdam ducimus animi ipsa iste officia earum error quo! Voluptas
-    ut ipsam eligendi quam exercitationem dolores fugit, impedit omnis vitae
-    mollitia, adipisci suscipit dolore nam. Debitis eaque totam excepturi est
-    pariatur sequi recusandae, non at nesciunt. Reprehenderit dolor id fuga
-    itaque animi incidunt atque harum, temporibus exercitationem error vero sunt
-    iure aut veniam voluptate architecto ab nisi natus. Debitis, consequuntur
-    totam cupiditate culpa eius odit molestiae? Aperiam voluptatem architecto
-    necessitatibus iure debitis doloribus quidem perspiciatis rerum minus
-    placeat sapiente deleniti quisquam et, excepturi vero quas iusto obcaecati
-    qui ducimus!
+    <%= @post.text %>
   </p>
 </article>
-<div class="post-comments margin-sides">
-  <h3>Username: Comment #1</h3>
-  <h3>Username: Comment #2</h3>
-  <h3>Username: Comment #3</h3>
-  <h3>Username: Comment #4</h3>
-  <h3>Username: Comment #5</h3>
-  <h3>Username: Comment #6</h3>
-  <h3>Username: Comment #7</h3>
-  <h3>Username: Comment #8</h3>
-  <h3>Username: Comment #9</h3>
-  <h3>Username: Comment #10</h3>
+
+<div class="full-post margin-sides">
+  <% unless @post.comments.empty? %>
+    <%= render "shared/comments", comments: @post.comments %>
+  <% end %>
+  <%= link_to "Back to all posts", user_posts_path(@user), class: "button flex-start" %>
 </div>
+

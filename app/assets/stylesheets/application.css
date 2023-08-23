@@ -45,7 +45,7 @@
 }
 
 .user-info {
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 10px;
   width: 100%;
   display: flex;
@@ -76,7 +76,7 @@
   flex-direction: column;
   gap: 20px;
   border-radius: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .posts-container {
@@ -84,15 +84,15 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .post {
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post-title {
@@ -103,6 +103,7 @@
   font-size: 13px;
   font-weight: 600;
   margin-left: auto;
+  margin-top: auto;
 }
 
 .button {
@@ -113,6 +114,8 @@
   border-radius: 3px;
   font-weight: 700;
   margin: 10px auto;
+  text-decoration: none;
+  color: black;
 }
 
 .post-header {
@@ -125,8 +128,14 @@
   flex-direction: column;
   gap: 3px;
   border-radius: 3px;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.comment {
+  font-weight: 500;
 }
 
 .post-article {
@@ -144,4 +153,45 @@
   align-self: end;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.see-post {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px;
+  align-self: end;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.full-post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flex-start {
+  align-self: flex-start;
+  margin: 0;
 }

@@ -1,0 +1,5 @@
+<div class="post-comments">
+  <% comments.each do |comment| %>
+    <p class="comment">- <%= comment.author.name %>: <%= comment.text %></p>
+  <% end %>
+</div>
