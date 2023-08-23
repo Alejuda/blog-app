@@ -127,7 +127,7 @@
   flex-direction: column;
   gap: 3px;
   border-radius: 3px;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 
