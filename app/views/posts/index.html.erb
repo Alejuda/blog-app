@@ -3,9 +3,11 @@
   <% @posts.each do |post| %>
     <%= render "shared/post", post: post %>
     <% unless post.comments.empty? %>
-      <%= render "shared/comments", comments: post.recent_comments %>
+      <%= render "shared/comments", comments: post.recent_comments%>
     <% end %>
   <% end %>
-  <%= link_to "Pagination", user_path(@user), class: "button" %>
-  <%= link_to 'New Post', new_user_post_path(@user), class: "button" %>
+  <div class="navigation-container">
+    <%= link_to "Pagination", user_path(@user), class: "button" %>
+    <%= link_to 'New Post', new_user_post_path(@user), class: "button" %>
+  </div>
 </ul>

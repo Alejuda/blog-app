@@ -6,7 +6,10 @@
     </p>
   </div>
   <div class="flex-column">
-    <%= link_to "See post >", user_post_path(@user, post.id), class: "see-post" %>
+    <div class="flex-row">
+      <%= link_to 'Add comment', new_user_post_comment_path(@user, post), class: "see-post comment" %>
+      <%= link_to "See post >", user_post_path(@user, post.id), class: "see-post" %>
+    </div>
     <p class="post-interactions">Comments: <%= post.comments_counter || 0 %>,
      Likes: <%= post.likes_counter || 0 %></p>
   </div>
