@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @post_id = params[:post_id]
     @comment = Comment.new
     respond_to do |format|
-      format.html { render :new, locals: { post: @post, user: @user} }
+      format.html { render :new, locals: { post: @post, user: @user } }
     end
   end
 
@@ -14,11 +14,11 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html do
         if comment.save
-          flash[:success] = "Comment created successfully"
+          flash[:success] = 'Comment created successfully'
           redirect_to user_posts_path(current_user)
         else
-          flash.now[:error] = "Error: Post have not been saved"
-          render :new, locals: {user: current_user}
+          flash.now[:error] = 'Error: Post have not been saved'
+          render :new, locals: { user: current_user }
         end
       end
     end
