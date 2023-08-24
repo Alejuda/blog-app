@@ -2,7 +2,7 @@
 <%= render "shared/bio", user: @user %>
 
 <ul class="posts-container">
-  <%= render partial: "shared/post", collection: @posts %>
+  <%= render partial: "shared/post", collection: @posts, locals: { user: @user } %>
   <div class="navigation-container">
   <%= link_to "Home", users_path, class: "button" %>
   <%= link_to "See all posts", user_posts_path(@user), class: "button" %>

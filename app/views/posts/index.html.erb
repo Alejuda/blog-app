@@ -1,9 +1,9 @@
 <%= render "shared/profile", user: @user %>
 <ul class="posts-container">
   <% @posts.each do |post| %>
-    <%= render "shared/post", post: post %>
+    <%= render "shared/post", post: post, user: @user %>
     <% unless post.comments.empty? %>
-      <%= render "shared/comments", comments: post.recent_comments%>
+      <%= render "shared/comments", comments: post.recent_comments %>
     <% end %>
   <% end %>
   <div class="navigation-container">
