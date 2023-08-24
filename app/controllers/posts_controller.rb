@@ -19,7 +19,6 @@ class PostsController < ApplicationController
 
   def create
     post_params = params.require(:post).permit(:title, :text)
-    puts params
     post = Post.new(author_id: current_user.id, **post_params)
     respond_to do |format|
       format.html do
