@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe 'posts/index', type: :system do
   describe 'index page' do
     let!(:user) do
-      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1', bio: 'teacher from argentina',
-                  posts_counter: 5)
+      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1',
+                  bio: 'teacher from argentina', posts_counter: 5)
     end
 
     let!(:commenter) do
-      User.create(name: 'commenter', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1', bio: 'teacher from mexico',
-                  posts_counter: 0)
+      User.create(name: 'commenter', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1',
+                  bio: 'teacher from mexico', posts_counter: 0)
     end
 
     let!(:post) do
@@ -17,7 +17,7 @@ RSpec.describe 'posts/index', type: :system do
     end
 
     let!(:comment1) do
-      Comment.create(author: commenter, post: post, text: 'Great post!')
+      Comment.create(author: commenter, post:, text: 'Great post!')
     end
 
     before do
@@ -39,11 +39,11 @@ RSpec.describe 'posts/index', type: :system do
     it 'displays the post title' do
       expect(page).to have_selector('h3', text: 'Post: Post Title')
     end
-    
+
     it 'displays some of the post\'s body' do
       expect(page).to have_selector('p', text: 'Post Text')
     end
-    
+
     it 'displays some of the post\'s comments' do
       expect(page).to have_selector('p', text: '- commenter: Great post!')
     end

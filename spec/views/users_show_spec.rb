@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'users/show', type: :system do
   describe 'show page' do
     let!(:user) do
-      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1', bio: 'teacher from argentina',
-                  posts_counter: 3)
+      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1',
+                  bio: 'teacher from argentina', posts_counter: 3)
     end
     let!(:post) do
       Post.create(title: 'test1', text: 'first post', author: user)

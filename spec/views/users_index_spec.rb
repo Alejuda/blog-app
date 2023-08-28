@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'users/index', type: :system do
   describe 'index page' do
     let!(:user1) do
-      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1', bio: 'teacher from argentina',
-                  posts_counter: 0)
+      User.create(name: 'nacho', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1',
+                  bio: 'teacher from argentina', posts_counter: 0)
     end
     let!(:user2) do
-      User.create(name: 'gabriel', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1', bio: 'teacher from chile',
-                  posts_counter: 1)
+      User.create(name: 'gabriel', photo: 'https://th.bing.com/th/id/OIP.xlTxIX_i9UIgOJtZCd01jwHaHa?pid=ImgDet&rs=1',
+                  bio: 'teacher from chile', posts_counter: 1)
     end
 
     before do
