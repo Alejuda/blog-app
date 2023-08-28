@@ -1,0 +1,11 @@
+user1:
+  name: "name1"
+  photo: "https://res.cloudinary.com/practicaldev/image/fetch/s--8rxhq79s--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/z2bgvvg2oh9536j7q2tb.png"
+  bio: "bio1"
+  posts_counter: 0
+
+user2:
+  name: "name2"
+  photo: "https://res.cloudinary.com/practicaldev/image/fetch/s--8rxhq79s--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/z2bgvvg2oh9536j7q2tb.png"
+  bio: "bio2"
+  posts_counter: 0
