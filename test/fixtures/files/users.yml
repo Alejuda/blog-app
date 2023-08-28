@@ -1,0 +1,9 @@
+user1:
+  name: "name1"
+  photo: "photo1"
+  bio: "bio1"
+
+user2:
+  name: "name2"
+  photo: "photo2"
+  bio: "bio2"
