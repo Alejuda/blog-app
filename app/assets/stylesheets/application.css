@@ -53,9 +53,15 @@
   padding: 40px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .user-name {
   font-size: 50px;
   align-self: center;
+  text-decoration: none;
+  color: black;
 }
 
 .user-photo {

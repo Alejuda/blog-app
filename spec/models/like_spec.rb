@@ -1,15 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  let(:user) do
+  let!(:user) do
     User.create(name: 'nacho', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Argentina.')
   end
 
-  let(:post) do
+  let!(:post) do
     Post.create(author: user, title: 'Hello', text: 'This is my first post')
   end
 
-  let(:like) do
+  let!(:like) do
     Like.new(user:, post:)
   end
 
