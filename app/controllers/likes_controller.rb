@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   def create
     post_id = params[:post_id]
     user = Post.find(post_id).author
-    like = Like.new(author_id: current_user.id, post_id:)
+    like = Like.new(user_id: current_user.id, post_id:)
     if like.save
       flash[:success] = 'Liked'
     else
