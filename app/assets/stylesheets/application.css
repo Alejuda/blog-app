@@ -234,7 +234,7 @@ a {
   width: 100%;
   padding: 6px;
   border: 2px solid rgb(37, 37, 145);
-  background-color: none;
+  background-color: white;
   border-radius: 2px;
 }
 
@@ -277,6 +277,7 @@ a {
   background-color: rgba(255, 0, 0, 0.144);
 }
 
-.notice, .alert {
+.notice,
+.alert {
   text-align: center;
 }
