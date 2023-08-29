@@ -1,0 +1,18 @@
+<header class="nav-container">
+  <h2 class="nav-title">Blog App</h2>
+  <ul class="nav-links">
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to "Sign Out", custom_destroy_user_session_path, method: :delete, class: "nav-link" %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Change Password", edit_user_password_path, class: "nav-link" %>
+      </li>
+    <% end %>
+
+  </ul>
+</header>

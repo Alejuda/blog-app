@@ -23,6 +23,30 @@
   padding: 0;
 }
 
+.nav-container {
+  padding: 20px 100px;
+  width: 100%;
+  background-color: rgb(47, 68, 192);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  color: white;
+}
+
+.nav-links {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+}
+
 .flex-gap {
   display: flex;
   flex-direction: column;
