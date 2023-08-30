@@ -21,9 +21,8 @@ class Post < ApplicationRecord
   end
 
   def delete_associated_likes_comments
-    self.likes.destroy_all
-    self.comments.destroy_all
+    likes.destroy_all
+    comments.destroy_all
     author.decrement!(:posts_counter)
   end
-
 end
