@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
 
   def create
     post_params = params.require(:post).permit(:title, :text)
+  
     post = Post.new(author_id: current_user.id, **post_params)
     respond_to do |format|
       format.html do
@@ -27,7 +30,7 @@ class PostsController < ApplicationController
           redirect_to user_posts_path(current_user)
         else
           flash.now[:error] = 'Error: Post have not been saved'
-          render :new, locals: { post: }
+          render :new, locals: { post: post}
         end
       end
     end
@@ -42,5 +45,5 @@ class PostsController < ApplicationController
     end
     redirect_to user_posts_path(current_user)
   end
-  
+
 end

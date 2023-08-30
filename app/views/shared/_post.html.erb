@@ -1,7 +1,7 @@
 <li class="post">
   <div class="flex-column">
     <h3 class="post-title">Post: <%= post.title %></h3>
-    <%= link_to "Delete Post", user_post_path(user, post),  method: :delete, data: { confirm: "Are you sure?" }, class: "see-post" %>
+      <%= link_to "Delete Post", user_post_path(user, post),  method: :delete, data: { confirm: "Are you sure?" }, class: "see-post" if can? :destroy, post%>
     <p class="post-text">
       <%= post.text %>
     </p>

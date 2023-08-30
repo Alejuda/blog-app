@@ -8,6 +8,6 @@
   <% end %>
   <div class="navigation-container">
     <%= link_to "Pagination", user_path(@user), class: "button" %>
-    <%= link_to 'New Post', new_user_post_path(@user), class: "button" %>
+    <%= link_to 'New Post', new_user_post_path(@user), class: "button" if @user == current_user %>
   </div>
 </ul>
