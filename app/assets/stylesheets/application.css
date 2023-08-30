@@ -166,6 +166,10 @@ a {
 
 .comment {
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
 }
 
 .post-article {
@@ -280,4 +284,9 @@ a {
 .notice,
 .alert {
   text-align: center;
+}
+
+.delete {
+  width: 100%;
+  text-align: end;
 }

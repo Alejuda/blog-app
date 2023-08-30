@@ -1,5 +1,9 @@
 <div class="post-comments">
   <% comments.each do |comment| %>
-    <p class="comment">- <%= comment.author.name %>: <%= comment.text %></p>
+    <p class="comment">- <%= comment.author.name %>: <%= comment.text %>
+      <%= link_to "Delete comment", user_post_comment_path(comment.author, comment.post, comment),
+       method: :delete, class: "delete" if can? :destroy, comment%>
+    </p>
+    
   <% end %>
 </div>

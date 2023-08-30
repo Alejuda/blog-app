@@ -1,6 +1,7 @@
 <li class="post">
   <div class="flex-column">
     <h3 class="post-title">Post: <%= post.title %></h3>
+      <%= link_to "Delete Post", user_post_path(user, post),  method: :delete, data: { confirm: "Are you sure?" }, class: "see-post" if can? :destroy, post%>
     <p class="post-text">
       <%= post.text %>
     </p>
@@ -9,7 +10,7 @@
     <div class="flex-row">
       <%= link_to 'Add comment', new_user_post_comment_path(@user, post_id: post.id), class: "see-post comment" %>
       <%= link_to "See post >", user_post_path(@user, post.id), class: "see-post" %>
-      <%= button_to "Like", user_post_likes_path(user, post_id: post.id), class: "like-button" %>
+      <%= button_to "Like", user_post_likes_path(user, post_id: post.id), class: "see-post" %>
     </div>
     <p class="post-interactions">Comments: <%= post.comments_counter || 0 %>,
      Likes: <%= post.likes_counter || 0 %></p>
