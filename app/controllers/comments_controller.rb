@@ -23,4 +23,14 @@ class CommentsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    if comment.destroy
+      flash[:success] = 'Post deleted successfully'
+    else
+      flash[:error] = 'Error deleting the post'
+    end
+    # redirect_to user_posts_path(current_user)
+  end
 end
