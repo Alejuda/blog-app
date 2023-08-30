@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
-
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -20,9 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post_params = params.require(:post).permit(:title, :text)
-
-    post = Post.new(author_id: current_user.id, **post_params)
+    post = Post.new(post_params)
     respond_to do |format|
       format.html do
         if post.save
@@ -44,5 +41,11 @@ class PostsController < ApplicationController
       flash[:error] = 'Error deleting the post'
     end
     redirect_to user_posts_path(current_user)
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text, :author_id)
   end
 end

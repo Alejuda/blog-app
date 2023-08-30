@@ -31,6 +31,6 @@ class CommentsController < ApplicationController
     else
       flash[:error] = 'Error deleting the post'
     end
-    # redirect_to user_posts_path(current_user)
+    redirect_to user_posts_path(current_user)
   end
 end

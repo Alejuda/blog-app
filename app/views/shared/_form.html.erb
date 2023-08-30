@@ -8,5 +8,6 @@
     <%= f.label :text %><br>
     <%= f.text_field :text %>
   </div>
+  <%= f.hidden_field :author_id, value: current_user.id %>
   <%= f.submit "Create post" %>
 <% end %>
